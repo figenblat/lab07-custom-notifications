@@ -6,13 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/editTextSender"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/sender_name" />
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/message"
+            android:inputType="textMultiLine" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="521dp" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Notification" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
